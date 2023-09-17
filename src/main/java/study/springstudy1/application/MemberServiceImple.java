@@ -1,5 +1,7 @@
 package study.springstudy1.application;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import study.springstudy1.domain.Member;
 import study.springstudy1.infrastructure.MemberRepository;
 import study.springstudy1.infrastructure.MemoryMemberRepository;
@@ -7,9 +9,11 @@ import study.springstudy1.infrastructure.MemoryMemberRepository;
 import java.util.List;
 import java.util.Optional;
 
+@Service // 스프링이 MemberServiceImple을 스프링 컨테이너에 넣어두고 관리를 해준다.
 public class MemberServiceImple implements MemberService{ // ctrl + shift + t로 테스트 코드 생성 가능
     private final MemoryMemberRepository memberRepository;
 
+    @Autowired // 생성자를 통해 memberRepository를 주입해준다.
     public MemberServiceImple(MemoryMemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
