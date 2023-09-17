@@ -1,4 +1,4 @@
-package study.springstudy1.repository;
+package study.springstudy1.infrastructure;
 
 import study.springstudy1.domain.Member;
 

@@ -1,11 +1,10 @@
 package repository;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import study.springstudy1.domain.Member;
-import study.springstudy1.repository.MemberRepository;
-import study.springstudy1.repository.MemoryMemberRepository;
+import study.springstudy1.infrastructure.MemberRepository;
+import study.springstudy1.infrastructure.MemoryMemberRepository;
 
 import java.util.List;
 
@@ -28,7 +27,8 @@ public class MemoryMemberRepositoryTest {
         Member result = memberRepository.findById(member.getId()).get();
         // 저장값과 입력값이 가져온 값이 같은지 체크
 //        Assertions.assertEquals(member, result);
-        assertThat(member).isEqualTo(result); // member가 result와 같은지 확인
+        // the first parameter is the actual value, the second parameter is the expected value
+        assertThat(result).isEqualTo(member); // member가 result와 같은지 확인
     }
 
     @Test
