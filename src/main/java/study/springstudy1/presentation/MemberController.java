@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import study.springstudy1.application.MemberServiceImple;
 
-@Controller //Controller를 통해 Controller 객체를 생성하고 스프링 컨트롤러에 등록해준다.
+@Controller //Controller를 통해 Controller 객체를 생성하고 스프링 컨트롤러에 등록해준다.(Component Scan)
 public class MemberController {
 
     private final MemberServiceImple memberService;
