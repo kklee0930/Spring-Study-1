@@ -8,13 +8,13 @@ import study.springstudy1.infrastructure.MemoryMemberRepository;
 
 @Configuration // 스프링 빈 직접 등록해주기
 public class SpringConfig {
-    @Bean
-    public MemberServiceImple memberService() {
-        return new MemberServiceImple(memberRepository());
-    }
-
-    @Bean
-    public MemberRepository memberRepository() {
-        return new MemoryMemberRepository();
-    }
+//    @Bean
+//    public MemberServiceImple memberService() {
+//        return new MemberServiceImple(memberRepository());
+//    }
+//
+//    @Bean
+//    public MemberRepository memberRepository() {
+//        return new MemoryMemberRepository();
+//    }
 }

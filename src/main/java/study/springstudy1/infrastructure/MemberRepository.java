@@ -1,5 +1,6 @@
 package study.springstudy1.infrastructure;
 
+import org.springframework.stereotype.Repository;
 import study.springstudy1.domain.Member;
 
 import java.util.List;
